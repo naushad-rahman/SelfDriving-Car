@@ -6,7 +6,7 @@
 1. Initially I set up drive.py to output a constant steering angle just to wire things up.
 2. After that, I create a very simple neural network with a single convolutional layer and a single fully connected layer to set up the pipeline for `drive.py` to make predictions using a trained model. With this simple model, I could not get very far on the track - it was hardly a few seconds before the car steered off the track.
 
-3. I have experimented with a [NVIDIA paper](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf). Howwver ,none of these model worked out of the box .
+3. I have experimented with a [NVIDIA paper](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf). I need to preprocessing of the data to able to make it working
 
 4. Since complete image details is not required , Our Main is to take feature from road . So to get the only road detail . I have trimmed the top 40 % and 10% from bottom . These processing alos reduce the image .
 
