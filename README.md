@@ -35,20 +35,30 @@ kernel_size = (3, 3)
 model.add(Lambda(lambda x: x / 127.5 - 1.,input_shape=input_shape,output_shape=input_shape))
 
 model.add(Convolution2D(16, 3, 3,border_mode='valid',input_shape=input_shape))
+
 	# Applying ReLU
 model.add(Activation('relu'))
+
 	# The second conv layer will convert 16 channels into 8 channels
+
 model.add(Convolution2D(8, 3, 3))
+
 	# Applying ReLU
 model.add(Activation('relu'))
+
 	# The second conv layer will convert 8 channels into 4 channels
+
 model.add(Convolution2D(4, 3,3))
+
 	# Applying ReLU
 model.add(Activation('relu'))
+
 	# The second conv layer will convert 4 channels into 2 channels
 model.add(Convolution2D(2, 3,3))
+
 	# Applying ReLU
 model.add(Activation('relu'))
+
 	# Apply Max Pooling for each 2 x 2 pixels
 model.add(MaxPooling2D(pool_size=pool_size))
 	# Apply dropout of 25%
