@@ -8,14 +8,14 @@
 
 [//]: # (Image References)
 
-[image1]: . /images/ModelDiagram.png "Model Visualization"
-[image3]: ./examples/left (1).jpg.png "Recovery Image"
-[image4]: ./examples/left (2).jpg.png "Recovery Image"
-[image5]: ./examples/left (3).jpg.png "Recovery Image"
+[image1]: . /Images/ModelDiagram.png "Model Visualization"
+[image3]: ./Images/left (1).jpg.png "Recovery Image"
+[image4]: ./Images/left (2).jpg.png "Recovery Image"
+[image5]: ./Images/left (3).jpg.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./images/Flipped Image.png "Flipped Image"
-[image8]: ./images/Flipped Image.png "Flipped Image"
-[image9]: ./images/Flipped Image.png "Flipped Image"
+[image7]: ./Images/Flipped Image.png "Flipped Image"
+[image8]: ./Images/Flipped Image.png "Flipped Image"
+[image9]: ./Images/Flipped Image.png "Flipped Image"
 
 
 ###Model Architecture and Training Strategy
