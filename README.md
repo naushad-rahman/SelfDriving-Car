@@ -8,13 +8,14 @@
 
 [//]: # (Image References)
 
-[image1]: . ModelDiagram.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image1]: . /images/ModelDiagram.png "Model Visualization"
+[image3]: ./examples/left (1).jpg.png "Recovery Image"
+[image4]: ./examples/left (2).jpg.png "Recovery Image"
+[image5]: ./examples/left (3).jpg.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image7]: ./images/Flipped Image.png "Flipped Image"
+[image8]: ./images/Flipped Image.png "Flipped Image"
+[image9]: ./images/Flipped Image.png "Flipped Image"
 
 
 ###Model Architecture and Training Strategy
@@ -121,28 +122,26 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 
 ####3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
-
-![alt text][image2]
-
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
-
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
-
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+I have capture , one from center lane driving . Here is an example image of center lane driving
+![center Lane ][center.jpg]
 
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to recover if the car goes off tracl . These images show what a recovery looks like starting from ... :
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+![ left][left (1).jpg]
+![left][left (2).jpg]
+![left][left (3).jpg]
+
+
+After the collection process, I had 24,108 number of data points. I then preprocessed this data by 
+1. Inverted images  
+2. Blurred images 
+3. Noisy images 
+4. Blurred versions of 1
+5. Noisy versions of 1
+so each image has 5 copy with different feature sets . 
+
+
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
+
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 10 as evidenced by I have only experiment with 1 ,5 ,10 and 15 since i find 15 doesnot give much significant improvment so i stick with 10  .I used an adam optimizer so that manually training the learning rate wasn't necessary.
