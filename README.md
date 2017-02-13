@@ -66,20 +66,28 @@ model.add(Dropout(0.25))
 
 	# Flatten the matrix. The input has size of 360
 model.add(Flatten())
+
 	# Input 360 Output 16
 model.add(Dense(16))
+
 	# Applying ReLU
 model.add(Activation('relu'))
+
 	# Input 16 Output 16
 model.add(Dense(16))
+
 	# Applying ReLU
 model.add(Activation('relu'))
+
 	# Input 16 Output 16
 model.add(Dense(16))
+
 	# Applying ReLU
 model.add(Activation('relu'))
+
 	# Apply dropout of 50%
 model.add(Dropout(0.5))
+
 	# Input 16 Output 1
 model.add(Dense(1))
 
